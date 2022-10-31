@@ -6,6 +6,8 @@ public class CountOccurrencesInSorted {
         int n = arr.length;
 //        int x = 20;
         int x = 10;
+        System.out.println(firstOccurrences(arr,n,x));
+        System.out.println(LastOccurrences(arr,n,x));
         System.out.println(countOccurrences(arr,n,x));
     }
     //Find firstOccurrences.

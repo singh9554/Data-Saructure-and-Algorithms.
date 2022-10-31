@@ -24,35 +24,25 @@
 package Sorting_Algorithm;
 import java.util.*;
 public class Insertion_sort {
-    static Scanner sc=null;
-public static void main(String[] args) {
-    sc=new Scanner(System.in);
-    System.out.println("Enter the size of the array");
-    int n=sc.nextInt();
-    int[] arr=new int[n];
-    System.out.println("Initialize the array");
-    for(int i=0;i<n;i++){
-        arr[i]=sc.nextInt();
+    public static void main(String[] args) {
+   int []arr={10,2,4,8,5,1,3,6,9,7};
+   int n = arr.length;
+   Sort(arr,n);
     }
-    Sort(arr,n);
-    PRINT(arr);
-}
-static void Sort(int[] arr,int n){
-    for(int i = 1 ; i < n ; i++){
-        if(arr[i-1]>arr[i]){
-            int key = arr[i];
-            int j = i-1 ;
-            while(j>=0 && arr[j]>key){
-                arr[j+1]=arr[j];
-                j=j-1;
+
+
+    static void Sort(int[] arr, int n) {
+        for (int i = 1; i < n; i++) {
+            if (arr[i] < arr[i - 1]) {
+                int key = arr[i];
+                int j = i - 1;
+                while (j >= 0 && arr[j] > key) {
+                    arr[j + 1] = arr[j];
+                    j--;
+                }
+                arr[j + 1] = key;
             }
-            arr[j+1]=key;
         }
+        System.out.println(Arrays.toString(arr));
     }
-}
-static void PRINT(int[] arr){
-    for(int element: arr){
-        System.out.print(element+" ");
-    }
-}
 }

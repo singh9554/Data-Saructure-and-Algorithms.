@@ -1,4 +1,5 @@
 package Array;
+import java.util.*;
 public class LeaderInAnArray {
     public static void main(String[] args){
 int []arr = {7,10,4,10,6,5,2};
@@ -34,5 +35,16 @@ Leader2(arr,n);
         }
 
     }
-
+    //This is optimized solution using HashSet which takes Time complexity of O(N) and space complexity of O(N);
+//    static void Leader2UsingSet(int []arr,int n) {
+//     HashSet<Integer> hs = new HashSet<>();
+//     for(int i : arr){
+//         hs.add(i);
+//     }
+//     for(int i = 0 ; i < n ; i++){
+//         if(hs.contains(arr[i])){
+//
+//         }
+//     }
+//    }
 }
